@@ -182,9 +182,9 @@ def parse_txt_questions(raw: str) -> Dict:
     """
     Format:
       Dimension headers (hidden):   Sattva:
-      Item lines (one per question): <text> [LABELS=a|b|c|d|e|f|g] [MIN=1][MAX=7][STEP=1]
-      Short form endpoints: [L=Never][R=Always]
-      Optional: [DIM=Rajas] to override header per item.
+      Item lines: <question text> [LABELS=a|b|...|z] [MIN=1][MAX=7][STEP=1]
+      Short-form endpoints: [L=Never][R=Always]
+      Optional per-item override: [DIM=Rajas]
     """
     lines = [l.rstrip() for l in raw.splitlines()]
     spec = {"scale": {"min":1, "max":7, "step":1}, "questions":[]}
@@ -195,32 +195,26 @@ def parse_txt_questions(raw: str) -> Dict:
         s = line.strip()
         if not s:
             continue
-        if s.endswith(":"):  # section header (hidden)
-            maybe = canon(s[:-1])
-            cur_dim = maybe
+        if s.endswith(":"):
+            cur_dim = canon(s[:-1])
             continue
 
         text = s
         kvs = _kv_blocks(s)
         if kvs:
-            # remove [..] from visible text
             text = ITEM_KV_RE.sub("", s).strip()
 
-        # dimension: DIM= overrides header; else use current header
         dim = canon(kvs.get("DIM", cur_dim or ""))
         if dim is None:
-            # skip lines not under a known dimension
             continue
 
-        # range
         vmin = int(kvs.get("MIN", "1"))
         vmax = int(kvs.get("MAX", "7"))
         vstep = int(kvs.get("STEP", "1"))
         if vmax <= vmin or vstep <= 0:
-            raise ValueError(f"Bad range for item '{text}': MIN={vmin} MAX={vmax} STEP={vstep}")
+            raise ValueError(f"Bad range for '{text}': MIN={vmin} MAX={vmax} STEP={vstep}")
         npoints = (vmax - vmin) // vstep + 1
 
-        # labels
         labels: Optional[List[str]] = None
         if "LABELS" in kvs:
             labels = [p.strip() for p in kvs["LABELS"].split("|")]
@@ -232,7 +226,6 @@ def parse_txt_questions(raw: str) -> Dict:
                 labels = [L, "Slightly "+L, "Somewhat "+L, "Neutral", "Somewhat "+R, "Slightly "+R, R]
             elif L and R and npoints == 5:
                 labels = [L, "Somewhat "+L, "Neutral", "Somewhat "+R, R]
-            # if still None, will display only endpoints as helper text
 
         counts[dim] = counts.get(dim, 0) + 1
         qid = f"q_{dim}_{counts[dim]}"
@@ -291,10 +284,10 @@ st.title("🧭 Motivational Archetypes – Test")
 
 with st.sidebar:
     st.header("Inputs")
-    q_up = st.file_uploader("Upload questions.txt", type=["txt"], help="Use: Dimension headers + item lines with [LABELS=…] or [L=…][R=…].")
+    q_up = st.file_uploader("Upload questions.txt", type=["txt"], help="Headers (hidden) + item lines with [LABELS=…] or [L=…][R=…].")
     norms_up = st.file_uploader("Optional norms.csv", type=["csv"])
     participant_id = st.text_input("Participant ID", value="P001")
-    st.caption("Questions are shuffled per participant ID.")
+    st.caption("Questions are shuffled per participant ID. Labels above sliders update live.")
 
 if q_up is None:
     st.info("Upload your questions.txt to begin.")
@@ -311,7 +304,7 @@ if not items:
     st.error("No items parsed. Check your headers (e.g., 'Sattva:') and item lines.")
     st.stop()
 
-# Stable per-user shuffle (hidden categories)
+# Stable per-user shuffle
 def stable_shuffle(items: List[Dict], pid: str, spec_obj: Dict) -> List[Dict]:
     spec_bytes = json.dumps(spec_obj, sort_keys=True).encode("utf-8")
     seed_hex = hashlib.sha256((pid + "|").encode("utf-8") + spec_bytes).hexdigest()[:16]
@@ -328,25 +321,25 @@ if "shuffle_meta" not in st.session_state or st.session_state.shuffle_meta != (p
 
 shuffled = st.session_state.shuffled_items
 
-# ============ Render items with dynamic label above the slider (categories hidden) ============
+# ============ Live label mapping ============
 
 def value_to_label(item: Dict, val: int) -> str:
-    vmin, vmax, step = int(item.get("min",1)), int(item.get("max",7)), int(item.get("step",1))
-    labels: Optional[List[str]] = item.get("labels")
+    vmin, vmax, step = int(item.get("min", 1)), int(item.get("max", 7)), int(item.get("step", 1))
+    labels = item.get("labels")
     idx = (val - vmin) // step
     if labels and 0 <= idx < len(labels):
         return labels[idx]
-    # fallback: if endpoints present and standard sizes
     L, R = item.get("L"), item.get("R")
     npoints = (vmax - vmin)//step + 1
     if L and R and npoints == 7:
-        fallback = [L,"Slightly "+L,"Somewhat "+L,"Neutral","Somewhat "+R,"Slightly "+R,R]
+        fallback = [L, f"Slightly {L}", f"Somewhat {L}", "Neutral", f"Somewhat {R}", f"Slightly {R}", R]
         return fallback[idx]
     if L and R and npoints == 5:
-        fallback = [L,"Somewhat "+L,"Neutral","Somewhat "+R,R]
+        fallback = [L, f"Somewhat {L}", "Neutral", f"Somewhat {R}", R]
         return fallback[idx]
-    # final fallback
     return ""
+
+# ============ Render (categories hidden; label above slider updates) ============
 
 responses: Dict[str,int] = {}
 scale_defaults = spec.get("scale", {"min":1,"max":7,"step":1})
@@ -354,21 +347,33 @@ scale_defaults = spec.get("scale", {"min":1,"max":7,"step":1})
 st.subheader("📝 Questionnaire")
 with st.form("quiz"):
     for it in shuffled:
-        vmin, vmax, step = int(it.get("min", scale_defaults.get("min",1))), int(it.get("max", scale_defaults.get("max",7))), int(it.get("step", scale_defaults.get("step",1)))
-        default_val = vmin + ((vmax - vmin)//(2*step))*step  # middle-ish
-        current = st.session_state.get(it["id"], default_val)
-        # dynamic label above slider
-        curr_label = value_to_label(it, current)
-        if curr_label:
-            st.markdown(f"**{curr_label}**")
-        # slider (label is the question text; categories hidden)
-        responses[it["id"]] = st.slider(
+        vmin = int(it.get("min", scale_defaults.get("min", 1)))
+        vmax = int(it.get("max", scale_defaults.get("max", 7)))
+        step = int(it.get("step", scale_defaults.get("step", 1)))
+        default_val = vmin + ((vmax - vmin) // (2 * step)) * step
+
+        # Reserve a placeholder ABOVE the slider for the dynamic label
+        label_ph = st.empty()
+
+        # Slider (label is the question text; no category headers)
+        val = st.slider(
             it["text"],
             min_value=vmin, max_value=vmax, step=step,
-            value=current,
+            value=st.session_state.get(it["id"], default_val),
             key=it["id"],
             help=None if not (it.get("L") or it.get("R")) else f"{it.get('L','')}  ↔  {it.get('R','')}",
         )
+
+        # Compute and display the current label
+        curr_label = value_to_label(it, val)
+        if curr_label:
+            label_ph.markdown(f"**{curr_label}**")
+        else:
+            # Optional tiny hint when no full label set is present
+            if it.get("L") or it.get("R"):
+                label_ph.markdown(f"**{it.get('L','')}**")
+
+        responses[it["id"]] = val
         st.divider()
     submitted = st.form_submit_button("Compute Results")
 
