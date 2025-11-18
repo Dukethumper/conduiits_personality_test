@@ -76,7 +76,7 @@ def canon(name: str) -> Optional[str]:
         if k in s and (best is None or len(k) > len(best[0])): best = (k, v)
     return best[1] if best else None
 
-# ====================== Centroids (embedded, adjusted headers) ======================
+# ====================== Centroids (embedded) ======================
 COLUMN_NORMALIZATION = {
     "Sattva":"Sattva","Rajas":"Rajas","Tamas":"Tamas","Prajna":"Prajna",
     "Pers.U":"Personal_Unconscious","Personal Unconscious":"Personal_Unconscious","Personal_Unconscious":"Personal_Unconscious",
@@ -154,7 +154,7 @@ def normalize_probs(v: np.ndarray) -> np.ndarray:
     s = float(v.sum())
     return v/s if s>0 else np.full_like(v, 1.0/len(v))
 
-# ======== Confidence (raw SI/SSB only; NO legacy/z expressions remain) ========
+# ======== Confidence (raw SI/SSB only) ========
 def compute_confidence_from_means(si: float, ssb: float) -> tuple[float, str]:
     si_n  = (float(si)  - 1.0) / 6.0
     ssb_n = (float(ssb) - 1.0) / 6.0
@@ -177,18 +177,14 @@ def quadrant_label_from_pair(a: str, b: str) -> str:
     return "Ambiguous"
 
 def strategy_subtype_mixture(str_means: dict[str, float], tol_same_axis: float = 0.0) -> tuple[str, str, dict]:
-    # Sort by value desc, name asc for deterministic ties
     ordered = sorted(str_means.items(), key=lambda kv: (-kv[1], kv[0]))
     (s1, v1), (s2, v2) = ordered[0], ordered[1]
-
-    # If top-2 are on same axis, swap s2 with best from opposite axis (keeps subtype readable)
     axis_h, axis_v = {"Control", "Flow"}, {"Conform", "Risk"}
     if (s1 in axis_h and s2 in axis_h) or (s1 in axis_v and s2 in axis_v):
         other_axis = axis_v if s1 in axis_h else axis_h
         third = next((k for k, _ in ordered[2:] if k in other_axis), None)
         if third is not None and abs(str_means[third] - v2) >= tol_same_axis:
             s2, v2 = third, str_means[third]
-
     p1, p2 = _mix_perc(v1, v2)
     gap = abs(v1 - v2)
     dom = "balanced" if gap < 0.2 else (f"{s1}-leaning" if gap < 0.6 else f"{s1}-dominant")
@@ -295,7 +291,7 @@ def prepare_archetype_pieces(z: ZParams) -> Tuple[pd.DataFrame,pd.DataFrame]:
 # ====================== UI ======================
 st.set_page_config(page_title="Motivational Archetypes – Test", page_icon="🧭", layout="wide")
 st.title("🧭 Motivational Archetypes – Test")
-APP_VERSION = "build: mixture-subtype & raw-confidence v2.0"
+APP_VERSION = "force-new-confidence-2025-11-17-PT"
 st.markdown(f"""
 <div style="padding:8px;border:2px solid #f00;border-radius:8px;margin:8px 0;">
   <b>Running:</b> {APP_VERSION}
@@ -311,11 +307,16 @@ with st.sidebar:
     ranking_mode = st.selectbox("Motivation ranking metric", ["Raw means (1–7)", "Z-scores (vs norms)"])
 
     st.markdown("---")
-    st.subheader("🧪 Debug Overrides")
-    use_overrides = st.checkbox("Enable overrides")
-    if use_overrides:
-        ov_si  = st.slider("Self_Insight (override)", 1.0, 7.0, 6.5, 0.1)
-        ov_ssb = st.slider("Self_Serving_Bias (override)", 1.0, 7.0, 6.5, 0.1)
+    st.subheader("🧪 Confidence override (proof)")
+    use_conf_override = st.checkbox("Override SI/SSB for confidence")
+    if use_conf_override:
+        ov_si  = st.slider("Self_Insight (override)", 1.0, 7.0, 7.0, 0.1)
+        ov_ssb = st.slider("Self_Serving_Bias (override)", 1.0, 7.0, 1.0, 0.1)
+
+    st.markdown("---")
+    st.subheader("🧪 Strategy overrides (optional)")
+    use_strat_override = st.checkbox("Override strategies")
+    if use_strat_override:
         ov_con = st.slider("Conform (override)", 1.0, 7.0, 6.0, 0.1)
         ov_ctl = st.slider("Control (override)", 1.0, 7.0, 6.5, 0.1)
         ov_flw = st.slider("Flow (override)",    1.0, 7.0, 2.5, 0.1)
@@ -397,7 +398,7 @@ for it in shuffled:
     st.divider()
     responses[it["id"]] = val
 
-# ====================== ALWAYS-ON DIAGNOSTICS (visible before Compute) ======================
+# ====================== ALWAYS-ON DIAGNOSTICS (before Compute) ======================
 with st.expander("🛠 Always-on Diagnostics (open me)"):
     st.write("**Header coverage (questions per dimension):**")
     st.json(count_items_by_dim(spec))
@@ -407,22 +408,35 @@ with st.expander("🛠 Always-on Diagnostics (open me)"):
     st.write("**Direct means (raw 1–7, from sliders right now):**")
     st.json({"Self": {"Self_Insight": si_now, "Self_Serving_Bias": ssb_now}, "Strategies": str_now})
 
+# --- Confidence sanity panel (shows exact inputs to formula) ---
+def _map01(x): return None if np.isnan(x) else (float(x) - 1.0) / 6.0
+with st.expander("🔒 Confidence sanity (open me)"):
+    st.write({
+        "SI_mean": si_now,
+        "SSB_mean": ssb_now,
+        "SI_map01": _map01(si_now),
+        "SSB_map01": _map01(ssb_now),
+        "C_formula": "C = 0.5*(SI_map01 + SSB_map01) clipped to [0,1]",
+    })
+
 # Compute
 compute = st.button("Compute Results")
 if not compute:
     st.stop()
 
-# Use overrides if enabled
-if st.session_state.get("use_overrides_state_stub", None) is None:
-    st.session_state.use_overrides_state_stub = use_overrides
-if use_overrides:
+# Apply overrides if selected
+if use_conf_override:
     si_now, ssb_now = ov_si, ov_ssb
+if use_strat_override:
     str_now = {"Conform": ov_con, "Control": ov_ctl, "Flow": ov_flw, "Risk": ov_rsk}
 
-# Guard SI/SSB presence (prevents any default confidence)
+# Guard SI/SSB presence
 if np.isnan(si_now) or np.isnan(ssb_now):
     st.error("Self_Insight or Self_Serving_Bias not detected. Fix headers in questions.txt.")
     st.stop()
+
+# Confidence (single source of truth)
+C, C_level = compute_confidence_from_means(si_now, ssb_now)
 
 # Validate required dims; derive orientations if missing
 REQ_DIMS = MOTIVATIONS + STRATEGIES + ORIENTATIONS + SELF_SCALES
@@ -456,7 +470,7 @@ if norms_up is not None:
         st.error(f"Failed to read norms.csv: {e}")
         st.stop()
 
-# Archetype prep
+# Archetypes scoring
 @dataclass
 class ScorePieces:
     probs: Dict[str,float]
@@ -468,27 +482,15 @@ class ScorePieces:
     confidence_level: str
     subtype_debug: dict
 
-def prepare_archetype_pieces(z: ZParams) -> Tuple[pd.DataFrame,pd.DataFrame]:
-    arch_mz = rowwise_motivation_z(ARCHETYPE_CENTROIDS)
-    arch_std = ARCHETYPE_CENTROIDS.copy()
-    for c in ALL_DIMS:
-        arch_std[c] = (arch_std[c] - z.mean[c]) / z.std[c]
-    return arch_mz, arch_std
-
 def score_single(
     person: pd.Series,
     z: ZParams,
     arch: pd.DataFrame,
     arch_mz: pd.DataFrame,
     arch_std: pd.DataFrame,
-    si_mean: float,
-    ssb_mean: float,
+    confidence: float,
     strategy_means: Dict[str, float],
 ) -> ScorePieces:
-    # Confidence: strictly raw (0..1)
-    C, C_level = compute_confidence_from_means(si_mean, ssb_mean)
-
-    # Z for motivations/strategies/orientations (for similarity calcs)
     z_mot = np.array([(person[m] - z.mean[m]) / z.std[m] for m in MOTIVATIONS], float)
     z_str = np.array([(person[s] - z.mean[s]) / z.std[s] for s in STRATEGIES], float)
     z_ori = np.array([(person[o] - z.mean[o]) / z.std[o] for o in ORIENTATIONS], float)
@@ -497,10 +499,7 @@ def score_single(
     names = list(arch.index); vals=[]
     for name in names:
         ap = arch_mz.loc[name, MOTIVATIONS].to_numpy(float)
-        if np.std(z_pat) > EPS and np.std(ap) > EPS:
-            R = float(np.corrcoef(z_pat, ap)[0,1])
-        else:
-            R = 0.0
+        R = float(np.corrcoef(z_pat, ap)[0,1]) if (np.std(z_pat)>EPS and np.std(ap)>EPS) else 0.0
         Rp = (R+1)/2
 
         am = arch_std.loc[name, MOTIVATIONS].to_numpy(float)
@@ -514,15 +513,13 @@ def score_single(
         DO = euclid(z_ori, ao); SO = 1/(1+DO)
 
         S_total = W_MOT_ABS*S_A + W_STRAT_MATCH*SS + W_ORIENT_MATCH*SO
-        vals.append(S_total*(0.75+0.25*C))
+        vals.append(S_total*(0.75+0.25*confidence))
 
     probs = normalize_probs(np.array(vals,float))
     order = np.argsort(-probs); top3=[(names[i], float(probs[i])) for i in order[:3]]
 
-    # Subtype/Quadrant from top-2 raw strategies (mixture)
     quadrant, subtype, subtype_dbg = strategy_subtype_mixture(strategy_means)
 
-    # Axes from within-person z of strategies (reference only)
     raw_str = np.array([person[s] for s in STRATEGIES], float)
     z_str_personal = intra_person_z(raw_str)
     axes = {
@@ -536,27 +533,22 @@ def score_single(
         quadrant=quadrant,
         strategy_subtype=subtype,
         quadrant_axes=axes,
-        confidence=float(C),
-        confidence_level=C_level,
+        confidence=float(confidence),
+        confidence_level=("High" if confidence >= 2/3 else ("Moderate" if confidence >= 0.45 else "Low")),
         subtype_debug=subtype_dbg,
     )
 
-# Fit norms or self
+# Build zparams and compute
 z = zparams_from_norms_or_single(person_scales, norms_df)
 arch_mz, arch_std = prepare_archetype_pieces(z)
 person_row = pd.Series({**person_scales, "participant_id": participant_id})
 
-# Direct means to drive confidence & subtype
-si_mean  = direct_mean_for_dim(responses, spec, "Self_Insight") if not use_overrides else ov_si
-ssb_mean = direct_mean_for_dim(responses, spec, "Self_Serving_Bias") if not use_overrides else ov_ssb
-strategy_means = direct_strategy_means(responses, spec) if not use_overrides else {
-    "Conform": ov_con, "Control": ov_ctl, "Flow": ov_flw, "Risk": ov_rsk
-}
+# Strategy means for subtype/quadrant
+strategy_means = str_now
 
-# Final score
 res = score_single(
     person_row, z, ARCHETYPE_CENTROIDS, arch_mz, arch_std,
-    si_mean=si_mean, ssb_mean=ssb_mean, strategy_means=strategy_means
+    confidence=C, strategy_means=strategy_means
 )
 
 # ====================== Report ======================
@@ -597,7 +589,7 @@ with left:
     st.subheader("🔒 Confidence")
     st.metric("Confidence Index", f"{res.confidence:.3f}", help="0 (all 1s on SI/SSB) → 1 (all 7s)")
     st.write(f"**Level:** {res.confidence_level}")
-    st.caption(f"SI mean: {si_mean:.2f} · SSB mean: {ssb_mean:.2f}")
+    st.caption(f"SI mean: {si_now:.2f} · SSB mean: {ssb_now:.2f}")
 
     st.subheader("📥 Download Full Scores (CSV)")
     out_df = pd.DataFrame([{ "participant_id": participant_id, **res.probs }])
@@ -700,9 +692,9 @@ if HAS_REPORTLAB:
         probs_series=probs,
         mot_df=mot_df[["rank"] + (["z"] if "z" in mot_df.columns else ["mean"])],
         ranking_mode_label=("Z-scores" if ranking_mode.startswith("Z") else "Raw means (1–7)"),
-        si_mean=si_mean,
-        ssb_mean=ssb_mean,
-        strategy_means=strategy_means,
+        si_mean=si_now,
+        ssb_mean=ssb_now,
+        strategy_means=str_now,
     )
     st.download_button("📄 Download PDF report", data=pdf_bytes,
                        file_name=f"{participant_id}_report.pdf", mime="application/pdf")
