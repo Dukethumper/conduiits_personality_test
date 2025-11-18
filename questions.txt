@@ -1,134 +1,134 @@
 Relational Balance:
 
-I strive to create relationships where both people feel heard and valued. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I try to understand others without losing sight of my own needs. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I believe healthy relationships require ongoing effort from both sides. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I avoid extremes in how I give or take in relationships. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I’m sensitive to how my presence affects group harmony. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I value emotional steadiness in relationships more than dramatic highs and lows. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I aim to be consistent and fair in how I relate to others. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I work to maintain honesty and empathy even when emotions run high. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I try to maintain fairness and understanding in my relationships. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I sometimes struggle to balance my own needs with others’. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I prefer calm, steady interactions over emotional highs and lows. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
+I can get frustrated when others don’t meet me halfway. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I notice quickly when a relationship starts to feel one-sided. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I’m sensitive to how my words or actions affect group harmony. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
+I try to repair tension rather than avoid it. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I occasionally prioritize peace over honesty. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
 
 Wu Wei:
 
-I achieve more when I stop trying to control every outcome. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I often find the right moment to act without forcing it. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I trust that things will work out if I allow them to unfold naturally. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I feel most effective when I respond to situations rather than plan everything in advance. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I feel most successful when my actions come effortlessly. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I know when to act and when to step aside. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I find that patience and stillness often lead to the right solution. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I stay calm and adjust easily when plans change unexpectedly. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
+I achieve more when I stop trying to control every outcome. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I often find the right moment to act without forcing it. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I trust that situations tend to unfold in their own way. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I sometimes act too quickly instead of waiting for the right timing. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I feel most effective when I respond naturally to what’s happening. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
+I can get restless when things take longer than I expect. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I find that patience often leads to better results than pressure. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I stay calm and adapt easily when plans change unexpectedly. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
 
 Anatta:
 
-I do not need to see myself as special; I'm content being just one part of the world. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I often forget myself when I'm involved in something meaningful. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-My personal identity feels fluid and changeable rather than fixed. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I find it easy to let go of my personal desires or ego-driven goals. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I try to see beyond my own ego when making decisions. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I see myself as just a small part of a larger whole. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I feel most at peace when I stop worrying about how I appear to others. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I try not to take things personally. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I often feel like I’m part of something larger than myself. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+My personal identity changes depending on my experiences. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
+I try to make decisions without letting ego or pride get in the way. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I sometimes lose motivation when I stop focusing on personal goals. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I find peace in letting go of how others see me. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I occasionally feel detached from my own emotions. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I see myself as just one small part of a wider system of life. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I feel most at peace when I stop trying to define myself. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
 
 Cheng:
 
-I feel at my best when I can be fully myself, without trying to impress others. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I don't try to control how others see me—I just act naturally. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I feel no need to justify who I am to others. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I trust my natural instincts to guide my behavior. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I feel most alive when I express myself without overthinking. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I prefer to be real rather than polished or perfect. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I feel most centered when my actions reflect both my values and my natural instincts. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I don’t like forcing myself into roles that don’t feel right. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I tend to feel most centered when I act according to my real values. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I don’t try to control how others see me — I focus on being genuine. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I find it easy to make decisions that reflect who I really am. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
+I sometimes struggle to stay true to myself when others expect more. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I prefer to be straightforward rather than polished or strategic. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I feel off-balance when I act in ways that don’t feel authentic. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
+I can be resistant to feedback when it challenges my sense of self. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I try to live in a way that feels both natural and responsible. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
 
 Prajna-Logos:
 
-I feel more in control when things are organized and logical. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I often analyze situations to find the most reasonable solution. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I often think through multiple outcomes before making a choice. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I find satisfaction in solving problems step-by-step. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I am driven to seek a deeper understanding of the world around me. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I feel fulfilled when I gain a new understanding or realization. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I am fascinated by ideas that challenge the way I normally think. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I often reflect on what lessons I can learn from my experiences. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I often pause to reflect on what a situation might be teaching me. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I look for patterns or meanings behind events in my life. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I enjoy thinking through complex problems step by step. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
+I sometimes overanalyze things instead of trusting my instincts. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I feel most satisfied when I’ve learned something that changes my perspective. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I tend to question my own assumptions before forming conclusions. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I like organizing ideas or information until they make clear sense. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
+I sometimes get frustrated when others avoid deep thinking. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
 
 Sattva:
 
-I feel calmer and more fulfilled when things around me are peaceful. [LABELS=Not at All Strongly|Mildly|Somewhat|Moderately|Strongly|Very Strongly|Extremely Strongly]
-I strive to maintain a peaceful and balanced environment. [LABELS=Not at All Strongly|Mildly|Somewhat|Moderately|Strongly|Very Strongly|Extremely Strongly]
-I am drawn to activities that bring me inner peace and clarity. [LABELS=Not at All Strongly|Mildly|Somewhat|Moderately|Strongly|Very Strongly|Extremely Strongly]
-I prefer a simple and tranquil life over a chaotic or intense one. [LABELS=Not at All Strongly|Mildly|Somewhat|Moderately|Strongly|Very Strongly|Extremely Strongly]
-I value clarity of mind and kindness in myself and others. [LABELS=Not at All Strongly|Mildly|Somewhat|Moderately|Strongly|Very Strongly|Extremely Strongly]
-I am motivated by a desire for harmony and goodness. [LABELS=Not at All Strongly|Mildly|Somewhat|Moderately|Strongly|Very Strongly|Extremely Strongly]
-I stay grounded and kind even when others around me are tense or upset. [LABELS=Not at All Strongly|Mildly|Somewhat|Moderately|Strongly|Very Strongly|Extremely Strongly]
-I feel most like myself when I am serene and content. [LABELS=Not at All Strongly|Mildly|Somewhat|Moderately|Strongly|Very Strongly|Extremely Strongly]
+I try to stay calm and centered even when things around me get tense. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I feel most like myself when my mind is clear and steady. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
+I sometimes avoid conflict to keep the peace, even when something feels off. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I value a calm atmosphere more than high energy or intensity. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I work best when my environment feels balanced and harmonious. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I try to treat others gently, even when I feel stressed. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I lose focus when life becomes chaotic or emotionally charged. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I believe peace is something you create through awareness, not avoidance. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
 
 Rajas:
 
-I feel restless if I'm not actively working toward a goal. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I constantly seek new challenges to keep me engaged. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I have a lot of energy when it comes to pursuing my ambitions. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I thrive on competition and pushing myself to excel. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I like to move fast and maintain momentum in my activities. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I get frustrated when things are too calm or move too slowly. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I feel most alive when I’m actively turning my ideas into reality. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I am willing to put in a lot of effort to achieve my goals. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
+I feel restless when I’m not moving toward something meaningful. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
+I get a burst of energy when I set a new goal for myself. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I find it hard to relax when progress feels slow. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I enjoy challenges that push me past what I thought I could do. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I sometimes take on more projects than I can realistically handle. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I feel most alive when my ideas start turning into action. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
+I lose motivation when things stay the same for too long. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I feel recharged by activity and movement more than by rest. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
 
 Tamas:
 
-I take comfort in sticking with familiar routines. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I enjoy relaxing and taking life at a slow pace. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I don't like to change things that are already working well for me. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I often put off tasks that require a lot of effort. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I prefer to stick with what I know rather than try something new. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I feel at ease when my life is predictable and unchanging. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I believe that taking things slowly helps me make better decisions. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I have a hard time pushing myself to do things when I don't absolutely have to. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
+I find comfort in familiar routines and habits. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I prefer gradual change over sudden disruption. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I feel most at ease when life follows a steady rhythm. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
+I sometimes resist new opportunities because I value stability. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I recharge best when I can slow down and do nothing for a while. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I can become stuck in comfort even when I know I need to move forward. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I believe steadiness is more important than constant activity. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I feel more grounded when my days are predictable. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
 
 Personal Unconscious:
 
-I rely on gut instincts when making tough choices. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I act based on deep intuition rather than on logic. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-Sometimes I feel like I know what to do without thinking about it. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-My hunches about people or situations are usually right. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I feel guided by an inner knowing that I can't always put into words. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I trust the wisdom of my subconscious mind. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I notice intuitive insights first as feelings or sensations before I can explain them. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-When I go with my gut feeling, I usually make good choices. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I often notice a feeling or impression about a situation before I can explain why. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I trust my gut reactions more when they stay consistent over time. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I sometimes act too quickly on instinct before thinking things through. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I feel guided by an inner sense of direction, even when I can’t fully describe it. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I use both intuition and logic when I make important decisions. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+My first impressions about people or events often turn out to be right. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I notice subtle bodily signals or moods that tell me when something is off. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
+I’ve learned that intuition works best when I’m calm and paying attention. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
 
 Collective Unconscious:
 
-I find meaning in contributing to something larger than myself. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I feel most fulfilled when I serve a greater cause or community. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-Being part of a tradition or movement gives me a sense of purpose. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I feel connected to a force or idea that is larger than my individual self. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I am inspired by the idea of having an impact on society or the world. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I often reflect on what legacy I will leave for future generations. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I feel most alive when I can express ideas or creations that connect me to something timeless or universal. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I feel guided by a sense of collective wisdom that we all share. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I feel most alive when contributing to something that outlasts me. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I’m inspired by the idea that my actions connect to a larger story or purpose. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
+I often notice patterns that seem to repeat across people or cultures. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I sometimes feel detached from collective issues because they seem too big to influence. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I find meaning in creating or supporting things that serve others beyond myself. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I feel connected to ideas, traditions, or values that have existed for generations. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
+I sense that creativity often comes from something bigger than personal willpower. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I care about leaving behind something of value for those who come after me. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
 
 Eros:
 
-I feel most fulfilled when I share a deep connection with someone. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I crave relationships where I can be fully open and emotionally honest. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I find emotional closeness more rewarding than surface-level socializing. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I value vulnerability and trust in my closest relationships. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I often feel a strong desire to bond deeply with others. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I’m willing to risk discomfort for the sake of emotional honesty. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I feel most connected when emotional honesty flows naturally between me and another person. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I feel emotionally empty when I lack deep relationships. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+My goal in life is to share a deep emotional connection with someone. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I feel most alive when I’m emotionally open with another person. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
+I often seek relationships where I can grow through vulnerability. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+I sometimes avoid closeness because it can feel overwhelming. [LABELS=Never | Rarely | Sometimes | About Half the Time | Often | Usually | Always]
+Deep connection feels more meaningful to me than excitement or novelty. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I’m drawn to experiences that bring me closer to someone’s inner world. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
+When I care for someone, I want to understand them completely. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I find emotional intimacy energizing, even when it requires hard work. [LABELS=Not at all | Slightly | Somewhat | Moderately | Quite | Very | Extremely]
 
 Thymos:
 
-I feel most alive when I earn respect through my actions. [LABELS=Not at All Strongly|Mildly|Somewhat|Moderately|Strongly|Very Strongly|Extremely Strongly]
-I strive to live in a way that I can be proud of. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-Recognition matters to me when it's based on genuine merit. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I care deeply about protecting my personal dignity. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I often feel the need to prove myself—not to gain approval, but to uphold my own standards. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I take pride in standing firm for what I believe in. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I feel a deep sense of purpose when I stand up for what I believe is right, even if it costs me. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
-I feel a strong urge to overcome challenges that test my worth. [LABELS=Not at All Strongly|Mildly|Somewhat|Moderately|Strongly|Very Strongly|Extremely Strongly]
+I feel most energized when I’m living in line with my values. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I take pride in standing by my beliefs, even when it’s unpopular. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I feel uncomfortable when others question my integrity. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I’m motivated by the feeling that I’ve earned genuine respect. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I try to live in a way that reflects the standards I hold myself to. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I sometimes struggle to admit when my values might need updating. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I gain confidence from doing what I believe is right, even if it’s hard. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I feel grounded when my actions match my sense of self-respect. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
 
 Conform:
 
@@ -170,25 +170,27 @@ I am willing to risk failure if there's a chance to achieve something great. [LA
 I have a high tolerance for uncertainty in my life. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
 Facing uncertainty helps me discover strengths I didn’t know I had. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
 
-Outward:
+Energy:
 
-I feel energized when I'm interacting with people and things around me. [LABELS=Not at All Strongly|Mildly|Somewhat|Moderately|Strongly|Very Strongly|Extremely Strongly]
-I usually process my thoughts by discussing them with others. [LABELS=Not at All Strongly|Mildly|Somewhat|Moderately|Strongly|Very Strongly|Extremely Strongly]
-I find it invigorating to meet new people and have new experiences. [LABELS=Not at All Strongly|Mildly|Somewhat|Moderately|Strongly|Very Strongly|Extremely Strongly]
-I am motivated by seeing the impact of my actions on the world. [LABELS=Not at All Strongly|Mildly|Somewhat|Moderately|Strongly|Very Strongly|Extremely Strongly]
-I tend to act first and reflect later. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I feel connected when I'm part of a group or community. [LABELS=Not at All Strongly|Mildly|Somewhat|Moderately|Strongly|Very Strongly|Extremely Strongly]
-I feel most fulfilled when I can actively contribute to what’s happening around me. [LABELS=Not at All Strongly|Mildly|Somewhat|Moderately|Strongly|Very Strongly|Extremely Strongly]
+I feel most alive when I’m in motion or facing new challenges.
+I prefer acting quickly to spending too much time thinking.
+I gain energy from tackling tasks directly.
+I become restless when life feels repetitive.
+I sometimes move too fast and have to backtrack. (reverse-keyed)
+I feel motivated when my environment is lively or unpredictable.
+I like to experiment and learn through direct experience.
+I thrive when I can adapt quickly to changing circumstances.
 
-Inward:
+Cognitive:
 
-I spend a lot of time reflecting on my own thoughts and feelings. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I feel recharged after spending time alone. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I find deep introspection to be very rewarding. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I prefer quiet contemplation over socializing in large groups. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I gain a lot of insight from exploring my own mind. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I am very aware of my internal moods and reactions. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
-I process experiences deeply before deciding what they mean to me. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
+I feel most alive when I’m exploring an idea deeply.
+I’m motivated by understanding more than by excitement.
+I often pause to analyze a situation before acting.
+I feel more grounded when I can make sense of things logically.
+I sometimes overthink things and lose momentum. (reverse-keyed)
+I find clarity through reflection, even in uncertain situations.
+I enjoy tracing how different events or ideas connect.
+I gain confidence when I can put my thoughts into a clear framework.
 
 Surrender:
 
