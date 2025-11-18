@@ -11,11 +11,15 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-# PDF (ReportLab)
-from reportlab.lib.pagesizes import LETTER
-from reportlab.lib import colors
-from reportlab.lib.styles import getSampleStyleSheet
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+# PDF (ReportLab) – optional to avoid crashing when not installed
+try:
+    from reportlab.lib.pagesizes import LETTER
+    from reportlab.lib import colors
+    from reportlab.lib.styles import getSampleStyleSheet
+    from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+    HAS_REPORTLAB = True
+except Exception:
+    HAS_REPORTLAB = False
 
 # ====================== Canonical dimensions ======================
 
@@ -466,7 +470,7 @@ for it in shuffled:
 compute = st.button("Compute Results")
 if not compute: st.stop()
 
-# ====================== Validation with canonical-only requirements (PATCH #1) ======================
+# ====================== Validation with canonical-only requirements ======================
 
 REQ_DIMS = MOTIVATIONS + STRATEGIES + ["Cognitive", "Energy", "Relational", "Surrender"] + SELF_SCALES
 LEGACY_TO_CANON = {"Inward": "Cognitive", "Outward": "Energy", "Relationship": "Relational", "Relational": "Relational"}
@@ -486,7 +490,7 @@ if missing:
     st.error(f"Missing responses for: {missing}")
     st.stop()
 
-# ====================== Norms (optional) with canonical rename (PATCH #2) ======================
+# ====================== Norms (optional) with canonical rename ======================
 
 norms_df = None
 if norms_up is not None:
@@ -556,86 +560,89 @@ with right:
     mot_buf = StringIO(); mot_df.reset_index(names="motivation").to_csv(mot_buf, index=False)
     st.download_button("Download motivation_ranking.csv", data=mot_buf.getvalue(), file_name=f"{participant_id}_motivation_ranking.csv", mime="text/csv")
 
-# ====================== PDF Export ======================
+# ====================== PDF Export (optional) ======================
 
-def build_pdf_report(
-    participant_id: str,
-    top3: List[Tuple[str,float]],
-    mix: List[Tuple[str,int]],
-    quadrant_label: str,
-    axes: Dict[str,float],
-    confidence: float,
-    probs_series: pd.Series,
-    mot_df: pd.DataFrame,
-    ranking_mode_label: str
-) -> bytes:
-    buf = BytesIO()
-    doc = SimpleDocTemplate(buf, pagesize=LETTER, leftMargin=36, rightMargin=36, topMargin=36, bottomMargin=36)
-    styles = getSampleStyleSheet()
-    story: List = []
+if HAS_REPORTLAB:
+    def build_pdf_report(
+        participant_id: str,
+        top3: List[Tuple[str,float]],
+        mix: List[Tuple[str,int]],
+        quadrant_label: str,
+        axes: Dict[str,float],
+        confidence: float,
+        probs_series: pd.Series,
+        mot_df: pd.DataFrame,
+        ranking_mode_label: str
+    ) -> bytes:
+        buf = BytesIO()
+        doc = SimpleDocTemplate(buf, pagesize=LETTER, leftMargin=36, rightMargin=36, topMargin=36, bottomMargin=36)
+        styles = getSampleStyleSheet()
+        story: List = []
 
-    story.append(Paragraph(f"Motivational Archetypes Report – {participant_id}", styles["Title"]))
-    story.append(Spacer(1, 8))
+        story.append(Paragraph(f"Motivational Archetypes Report – {participant_id}", styles["Title"]))
+        story.append(Spacer(1, 8))
 
-    (tp1,v1),(tp2,v2),(tp3,v3) = top3
-    story.append(Paragraph("<b>Top Archetypes</b>", styles["Heading2"]))
-    story.append(Paragraph(f"Primary: <b>{tp1}</b> ({v1:.3f})", styles["Normal"]))
-    story.append(Paragraph(f"Secondary: <b>{tp2}</b> ({v2:.3f})", styles["Normal"]))
-    story.append(Paragraph(f"Tertiary: <b>{tp3}</b> ({v3:.3f})", styles["Normal"]))
-    mix_line = " · ".join([f"{pct}% {name}" for name, pct in mix])
-    story.append(Paragraph(f"Top-3 mix: <b>{mix_line}</b>", styles["Normal"]))
-    story.append(Spacer(1, 8))
+        (tp1,v1),(tp2,v2),(tp3,v3) = top3
+        story.append(Paragraph("<b>Top Archetypes</b>", styles["Heading2"]))
+        story.append(Paragraph(f"Primary: <b>{tp1}</b> ({v1:.3f})", styles["Normal"]))
+        story.append(Paragraph(f"Secondary: <b>{tp2}</b> ({v2:.3f})", styles["Normal"]))
+        story.append(Paragraph(f"Tertiary: <b>{tp3}</b> ({v3:.3f})", styles["Normal"]))
+        mix_line = " · ".join([f"{pct}% {name}" for name, pct in mix])
+        story.append(Paragraph(f"Top-3 mix: <b>{mix_line}</b>", styles["Normal"]))
+        story.append(Spacer(1, 8))
 
-    story.append(Paragraph("<b>Strategic Quadrant</b>", styles["Heading2"]))
-    story.append(Paragraph(f"{quadrant_label}", styles["Normal"]))
-    story.append(Paragraph(f"axis_CF = {axes['axis_CF']:.2f} | axis_CR = {axes['axis_CR']:.2f}", styles["Normal"]))
-    story.append(Paragraph(f"Confidence Index: <b>{confidence:.3f}</b>", styles["Normal"]))
-    story.append(Spacer(1, 8))
+        story.append(Paragraph("<b>Strategic Quadrant</b>", styles["Heading2"]))
+        story.append(Paragraph(f"{quadrant_label}", styles["Normal"]))
+        story.append(Paragraph(f"axis_CF = {axes['axis_CF']:.2f} | axis_CR = {axes['axis_CR']:.2f}", styles["Normal"]))
+        story.append(Paragraph(f"Confidence Index: <b>{confidence:.3f}</b>", styles["Normal"]))
+        story.append(Spacer(1, 8))
 
-    story.append(Paragraph("<b>Archetype Probabilities</b>", styles["Heading2"]))
-    probs_tbl_data = [["Archetype", "Probability"]]
-    for name, val in probs_series.items():
-        probs_tbl_data.append([name, f"{val:.3f}"])
-    probs_tbl = Table(probs_tbl_data, hAlign="LEFT")
-    probs_tbl.setStyle(TableStyle([
-        ('BACKGROUND', (0,0), (-1,0), colors.lightgrey),
-        ('GRID', (0,0), (-1,-1), 0.25, colors.grey),
-        ('ALIGN', (1,1), (1,-1), 'RIGHT'),
-        ('FONTNAME', (0,0), (-1,0), 'Helvetica-Bold'),
-    ]))
-    story.append(probs_tbl)
-    story.append(Spacer(1, 8))
+        story.append(Paragraph("<b>Archetype Probabilities</b>", styles["Heading2"]))
+        probs_tbl_data = [["Archetype", "Probability"]]
+        for name, val in probs_series.items():
+            probs_tbl_data.append([name, f"{val:.3f}"])
+        probs_tbl = Table(probs_tbl_data, hAlign="LEFT")
+        probs_tbl.setStyle(TableStyle([
+            ('BACKGROUND', (0,0), (-1,0), colors.lightgrey),
+            ('GRID', (0,0), (-1,-1), 0.25, colors.grey),
+            ('ALIGN', (1,1), (1,-1), 'RIGHT'),
+            ('FONTNAME', (0,0), (-1,0), 'Helvetica-Bold'),
+        ]))
+        story.append(probs_tbl)
+        story.append(Spacer(1, 8))
 
-    story.append(Paragraph(f"<b>Motivation Ranking — {ranking_mode_label}</b>", styles["Heading2"]))
-    col_label = "Z" if "z" in mot_df.columns else "Mean"
-    mot_tbl_data = [["Rank", "Motivation", col_label]]
-    mot_iter = mot_df.reset_index().rename(columns={"index":"Motivation"})
-    for _, r in mot_iter.iterrows():
-        mot_tbl_data.append([int(r["rank"]), r["Motivation"], f"{float(r[col_label.lower()]):.3f}"])
-    mot_tbl = Table(mot_tbl_data, hAlign="LEFT")
-    mot_tbl.setStyle(TableStyle([
-        ('BACKGROUND', (0,0), (-1,0), colors.lightgrey),
-        ('GRID', (0,0), (-1,-1), 0.25, colors.grey),
-        ('ALIGN', (0,0), (-1,0), 'CENTER'),
-        ('ALIGN', (0,1), (0,-1), 'CENTER'),
-        ('ALIGN', (2,1), (2,-1), 'RIGHT'),
-        ('FONTNAME', (0,0), (-1,0), 'Helvetica-Bold'),
-    ]))
-    story.append(mot_tbl)
+        story.append(Paragraph(f"<b>Motivation Ranking — {ranking_mode_label}</b>", styles["Heading2"]))
+        col_label = "Z" if "z" in mot_df.columns else "Mean"
+        mot_tbl_data = [["Rank", "Motivation", col_label]]
+        mot_iter = mot_df.reset_index().rename(columns={"index":"Motivation"})
+        for _, r in mot_iter.iterrows():
+            mot_tbl_data.append([int(r["rank"]), r["Motivation"], f"{float(r[col_label.lower()]):.3f}"])
+        mot_tbl = Table(mot_tbl_data, hAlign="LEFT")
+        mot_tbl.setStyle(TableStyle([
+            ('BACKGROUND', (0,0), (-1,0), colors.lightgrey),
+            ('GRID', (0,0), (-1,-1), 0.25, colors.grey),
+            ('ALIGN', (0,0), (-1,0), 'CENTER'),
+            ('ALIGN', (0,1), (0,-1), 'CENTER'),
+            ('ALIGN', (2,1), (2,-1), 'RIGHT'),
+            ('FONTNAME', (0,0), (-1,0), 'Helvetica-Bold'),
+        ]))
+        story.append(mot_tbl)
 
-    doc.build(story)
-    return buf.getvalue()
+        doc.build(story)
+        return buf.getvalue()
 
-pdf_bytes = build_pdf_report(
-    participant_id=participant_id,
-    top3=res["top3"],
-    mix=mix,
-    quadrant_label=res["quadrant"],
-    axes=res["quadrant_axes"],
-    confidence=res["confidence"],
-    probs_series=probs,
-    mot_df=mot_df[["rank"] + ([ "z" ] if "z" in mot_df.columns else [ "mean" ])],
-    ranking_mode_label=("Z-scores" if ranking_mode.startswith("Z") else "Raw means (1–7)")
-)
-st.download_button("📄 Download PDF report", data=pdf_bytes,
-                   file_name=f"{participant_id}_report.pdf", mime="application/pdf")
+    pdf_bytes = build_pdf_report(
+        participant_id=participant_id,
+        top3=res["top3"],
+        mix=mix,
+        quadrant_label=res["quadrant"],
+        axes=res["quadrant_axes"],
+        confidence=res["confidence"],
+        probs_series=probs,
+        mot_df=mot_df[["rank"] + (["z"] if "z" in mot_df.columns else ["mean"])],
+        ranking_mode_label=("Z-scores" if ranking_mode.startswith("Z") else "Raw means (1–7)")
+    )
+    st.download_button("📄 Download PDF report", data=pdf_bytes,
+                       file_name=f"{participant_id}_report.pdf", mime="application/pdf")
+else:
+    st.info("📄 PDF export disabled (install `reportlab` to enable). You can still download CSVs above.")
