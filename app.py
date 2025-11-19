@@ -386,13 +386,19 @@ if missing_dims:
     st.error(f"Missing responses for: {missing_dims}")
     st.stop()
 
-# Confidence (unchanged)
+# Confidence 
 def compute_confidence_from_means(si: float, ssb: float) -> tuple[float, str]:
+    """
+    Confidence is high when Self Insight is high and Self Serving Bias is low.
+    - SI mapped normally: 1 -> 0.0, 7 -> 1.0
+    - SSB mapped *reversed*: 1 -> 1.0, 7 -> 0.0   # why: lower SSB increases confidence
+    """
     si_n  = (float(si)  - 1.0) / 6.0
-    ssb_n = (float(ssb) - 1.0) / 6.0
+    ssb_n = (7.0 - float(ssb)) / 6.0  # <-- reversed scoring for SSB
     C = max(0.0, min(1.0, 0.5 * (si_n + ssb_n)))
     level = "High" if C >= 2/3 else ("Moderate" if C >= 0.45 else "Low")
     return C, level
+
 
 si_vals  = direct_values_for_dim(responses, spec, "Self_Insight")
 ssb_vals = direct_values_for_dim(responses, spec, "Self_Serving_Bias")
@@ -549,4 +555,3 @@ if HAS_REPORTLAB:
     st.download_button("📄 Download PDF report", data=pdf_bytes, file_name=f"{participant_id}_report.pdf", mime="application/pdf")
 else:
     st.info("📄 PDF export disabled (install `reportlab`).")
-

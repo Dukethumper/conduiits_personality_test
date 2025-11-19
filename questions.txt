@@ -172,25 +172,25 @@ Facing uncertainty helps me discover strengths I didn’t know I had. [LABELS=Ne
 
 Energy:
 
-I feel most alive when I’m in motion or facing new challenges.
-I prefer acting quickly to spending too much time thinking.
-I gain energy from tackling tasks directly.
-I become restless when life feels repetitive.
-I sometimes move too fast and have to backtrack. (reverse-keyed)
-I feel motivated when my environment is lively or unpredictable.
-I like to experiment and learn through direct experience.
-I thrive when I can adapt quickly to changing circumstances.
+I feel most alive when I’m in motion or facing new challenges. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
+I prefer acting quickly to spending too much time thinking. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
+I gain energy from tackling tasks directly. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
+I become restless when life feels repetitive. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
+I sometimes move too fast and have to backtrack. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
+I feel motivated when my environment is lively or unpredictable. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
+I like to experiment and learn through direct experience. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
+I thrive when I can adapt quickly to changing circumstances. [LABELS=Never|Rarely|Occasionally|Sometimes|Often|Usually|Always]
 
 Cognitive:
 
-I feel most alive when I’m exploring an idea deeply.
-I’m motivated by understanding more than by excitement.
-I often pause to analyze a situation before acting.
-I feel more grounded when I can make sense of things logically.
-I sometimes overthink things and lose momentum. (reverse-keyed)
-I find clarity through reflection, even in uncertain situations.
-I enjoy tracing how different events or ideas connect.
-I gain confidence when I can put my thoughts into a clear framework.
+I feel most alive when I’m exploring an idea deeply. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I’m motivated by understanding more than by excitement. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I often pause to analyze a situation before acting. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I feel more grounded when I can make sense of things logically. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I sometimes overthink things and lose momentum.  [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I find clarity through reflection, even in uncertain situations. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I enjoy tracing how different events or ideas connect. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
+I gain confidence when I can put my thoughts into a clear framework. [LABELS=Completely Untrue of Me|Mostly Untrue of Me|Somewhat Untrue of Me|Neutral|Somewhat True of Me|Mostly True of Me|Completely True of Me]
 
 Surrender:
 
